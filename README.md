@@ -1,6 +1,6 @@
 # RedGin Store
 A Lightweight, Reactive, and Persistent State Management for Web Components.
-RedGin Store is a surgically optimized Pub/Sub state manager designed to complement the RedGin Library. It provides global reactivity with zero Virtual DOM overhead, built-in LocalStorage persistence, and automatic batching.
+RedGin Store is a surgically optimized Pub/Sub state manager designed to complement the [RedGin Library](https://www.npmjs.com/package/redgin). It provides global reactivity with zero Virtual DOM overhead, built-in LocalStorage persistence, and automatic batching.
 
 
 # The Pain Points
@@ -78,3 +78,47 @@ class ShoppingCart extends RedGin {
 }
 
 ```
+
+### API Reference
+`new Store(initialState, storageKey?)`
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `initialState` | Object | The starting data for your store. |
+| `storageKey` | string | (Optional) The key name for LocalStorage persistence |
+
+`store.set(key, value)`
+
+Updates a specific top-level key in the state. Triggers a batched notification to all subscribers.
+* Note: Use immutable patterns (spread operator) for arrays and objects to ensure reactivity.
+
+`store.subscribe(callback)`
+
+Registers a listener. Returns an unsubscribe function
+
+```js
+const unsub = store.subscribe(state => console.log(state));
+unsub(); // Stop listening
+```
+
+# Performance Tip: Batching
+RedGin Store uses Microtask Batching. If you execute:
+
+```js
+store.set('user', 'Admin');
+store.set('theme', 'dark');
+store.set('cart', []);
+```
+
+The UI will only re-render once at the end of the execution block, preventing expensive layout thrashing.
+
+## Help
+
+Need help? Open an issue in: [ISSUES](https://github.com/josnin/redgin-store/issues)
+
+
+## Contributing
+Want to improve and add feature? Fork the repo, add your changes and send a pull request.
+
+
+
