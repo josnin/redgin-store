@@ -19,6 +19,20 @@ RedGin Store was built to provide Single Source of Truth that is:
 * ⚛️ Immutable & Type-Safe: Uses reference-based dirty checking to ensure high-performance updates.
 * 📦 Zero Dependencies: Extremely small footprint (~1kb).
 
+# Installation
+
+### Via npm
+```bash
+npm i redgin-store
+```
+
+## Via CDN
+
+```js
+<script type="module" src="https://cdn.jsdelivr.net/npm/redgin-store@latest/dist/redgin-store.min.js"></script>
+```
+
+
 # Quick Start
 1. Define your Store
 Create a singleton instance. Pass a storageKey as the second argument to enable persistence.
