@@ -1,4 +1,4 @@
-# 📦 RedGin Store
+# RedGin Store
 
 **A Lightweight, Reactive, and Persistent State Management for Web Components.**
 
@@ -6,7 +6,7 @@ RedGin Store is a surgically optimized Pub/Sub state manager designed specifical
 
 ---
 
-## 😫 The Pain Points
+## The Pain Points
 Building complex Web Components usually leads to several major headaches:
 *   **Prop Drilling:** Passing data through five layers of nested components just to update a single value.
 *   **Zombie Listeners (Memory Leaks):** Global store listeners that stay in RAM after a component is destroyed, leading to "ghost" updates and performance degradation.
@@ -15,7 +15,7 @@ Building complex Web Components usually leads to several major headaches:
 
 ---
 
-## ✨ Purpose & Features
+## Purpose & Features
 RedGin Store provides a **Single Source of Truth** that is:
 *   🚀 **Surgically Reactive:** Leverages `queueMicrotask` to batch multiple updates into a single tick.
 *   💾 **Persistent by Design:** Optional LocalStorage integration—hydrate your state automatically on page load.
@@ -25,7 +25,7 @@ RedGin Store provides a **Single Source of Truth** that is:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Via npm
 ```bash
