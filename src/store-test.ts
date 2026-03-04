@@ -2,7 +2,11 @@
 import { RedGin, getset, html, watch, on } from 'redgin';
 import { Store } from './store';
 // Usage: Persistence is enabled by passing a key as the second argument
-const store = new Store({ cartCount1: 0, user: 'Guest' }, 'my_app_store');
+const store = new Store(
+  { cartCount1: 0, user: 'Guest' }, 
+  { storageKey: 'my_app_store', debug: true }
+);
+
 
 class StoreTest extends RedGin {
   // 1. Link local reactive state to global store
