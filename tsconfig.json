@@ -8,8 +8,7 @@
     "emitDeclarationOnly": false,
     "outDir": "./dist",
     "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true
+    "allowImportingTsExtensions": true
   },
   "include": ["src"]
 }

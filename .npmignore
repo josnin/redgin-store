@@ -8,3 +8,6 @@ tslint.json
 index.html
 index.ts
 index.js
+dist/main.d.ts
+dist/product-manager.d.ts
+dist/store-test.d.ts

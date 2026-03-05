@@ -1,11 +1,11 @@
 {
   "name": "redgin-store",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "main": "./dist/redgin-store.min.js",
   "module": "./dist/redgin-store.min.js",
   "types": "./dist/store.d.ts",
-    "keywords": [
+  "keywords": [
     "redgin",
     "web-components",
     "state-management",
@@ -23,13 +23,13 @@
   "description": "A lightweight state management library for web components, built on top of Redgin. Provides a simple and efficient way to manage state in your web applications.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/josnin/redgin-store.git"
+    "url": "git+https://github.com/josnin/redgin-store.git"
   },
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "esbuild src/store.ts --bundle --minify --format=esm --external:redgin --outfile=dist/redgin-store.min.js",
-    "check-types": "tsc --noEmit"
+    "build": "tsc --emitDeclarationOnly",
+    "bundle": "esbuild src/store.ts --bundle --minify --format=esm --external:redgin --outfile=dist/redgin-store.min.js"
   },
   "devDependencies": {
     "esbuild": "^0.20.0",
